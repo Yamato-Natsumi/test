@@ -1,271 +1,374 @@
-* {
+
+.body{
+  position: relative;
+}
+
+.content{
+  background-color:white;
+}
+
+header{
+  background-color: white;
+  height:80px;
+  width: 100%;
+  position: fixed;
+  z-index: 9950;
+}
+
+header>img{
+  margin: 18px 35px;
+}
+
+video{
+  width:100%;
+  margin-top: 80px;
+}
+
+.pickUp{
+  margin-top: 70px;
+}
+
+.h1Center{
+  text-align:center;
+}
+
+h1{
+  display: inline-block;
+  font-size: 35px;
+  margin:30px;
+}
+
+.slider{
+  overflow: hidden;
+}
+
+.slider img{
+  width:20vw;
+  margin:0 auto;
+}
+
+.feTitle{
+  margin-top: 80px;
+}
+
+.category{
+  display:inline-block;
+  margin: 14px 0;
   box-sizing: border-box;
+  width: 30%;
+  box-shadow: 0 0 15px darkgray;
+  width: 30%;
 }
 
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 100%;
-  padding: 0 15px;
+.feature{
   margin: 0 auto;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction:row;
+  flex-wrap: wrap;
+  width:100%;
+  max-width: 1260px;
+  height: fit-content;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
+.text{
+  margin:30px;
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-}
-
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
+h2{
+  font-size: 12px;
   font-weight: normal;
 }
 
-.lesson {
-  float: left;
-  width: 25%;
+.main-text{
+  font-size:14px;
+  font-weight: bolder;
+  padding:8px 0 15px 0;
 }
 
-.lesson-icon {
-  position: relative;
+.date{
+  font-size: 12px;
+  text-align: right;
 }
 
-.lesson-icon p {
+.category img{
+  width: 100%;
+}
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeUpAnime{/*動き方の指定*/
+  from {
+    opacity: 0;
+  transform: translateY(300px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.fadeUpTrigger{
+  opacity:0;
+}
+
+footer{
   position: absolute;
-  top: 37%;
-  width: 100%;
+  width:100%;
+  height: fit-content;
+  margin-top: 50px;
+  padding: 0 15px 0 15px;
+  background-color: black;
   color: white;
+  text-align: center;
+  font-size: 15px;
 }
 
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
+footer h1{
+  padding: 25px 0 8px 0;
 }
 
-.heading h3 {
+.contact{
+  text-align: left;
+  margin: 0 auto;
+  position: relative;
+  height: 380px;
+  max-width: 1230px;
   font-weight: normal;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
+.contactText{
+  position:absolute;
+  left:0;
+  width:45%;
 }
 
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
+.fome{
+  width:45%;
+  margin-left:85px;
+  position: absolute;
+  right:0;
 }
 
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
+.fome input{
+ width: 100%;
+ border: none;
+ margin-bottom: 20px;
 }
 
-footer img {
-  width: 125px;
+.person{
+  height:45px;
 }
 
-footer p {
-  color: #b3aeb5;
+.message{
+  height: 70px;
+}
+
+.fome p{
+  margin:0;
+}
+
+button{
+  color: white;
+  background-color: black;
+  border-color: white;
+  border-width:1px;
+  width: 210px;
+  height: 50px;
+}
+
+button:hover{
+  color:black;
+  background-color: white;
+  border-color:black;
+}
+
+.logo{
+  margin: 10px 0 10PX 0;
   font-size: 12px;
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+.icon{
+  z-index: 9980;
+  position: fixed;
+  display:block;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin:16px 40px;
+  top: 0;
+  right: 0;
+  transition: all .5s;
 }
 
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
+.icon span{
+  display:block;
+  padding: 1px 13px;
+  margin:10px;
+  background-color: black;
+  transition: all .5s;
+}
+
+.icon span:nth-child(1){
+  top:4px;
+}
+
+.icon span:nth-child(2){
+  top:14px;
+}
+
+.icon span:nth-child(3){
+  bottom:4px;
+}
+
+
+.active span{
+  background-color: white;
+}
+
+.active span:nth-child(1){
+  transform: translateY(12px) rotate(-315deg);
+}
+
+.active span:nth-child(2){
+  opacity: 0;
+}
+
+.active span:nth-child(3){
+  transform: translateY(-12px) rotate(315deg);
+}
+
+.close{
+  cursor: pointer;
   display: none;
+  position: fixed;
+  background-color: rgba(0,0,0,0.7);
+  height:100vh;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: 9970;
 }
 
-.clear {
-  clear: left;
+.menu{
+  display: block;
+  background-color: black;
+  height:100%;
+  width: 300px;
+  left:-300px;
+  position: fixed;
+  z-index: 9980;
+  padding: 25px;
+  opacity: 0;
+  transition: all .5s;
 }
 
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
+.open{
+  left: 0;
+  opacity:1;
+}
+
+.menuList a{
+  color:white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.menuList div{
+  padding: 18px 0;
+
+}
+
+.border{
+  border-top: solid 1px white;
+  border-bottom:solid 1px white ;
+}
+
+.menuList{
+  margin: 40px 0 60px 0;
+}
+
+.link a{
+  display: block;
+  padding: 0;
+  margin-top:10px;
+  color:white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 1023px){/*タブレット*/
+  .category{
+    width: 48.5%;
   }
 
-  .lesson-wrapper {
-    height: 990px;
+  .feature{
+    padding:18px;
+    justify-content:space-between; 
   }
 
-  footer {
+}
+
+@media only screen and (max-width: 780px){/*スマホ*/
+  
+  video{
+    width:auto;
+    height:569px;
     text-align: center;
   }
-}
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
+  .hide{
+    overflow: hidden;
+  } 
+
+  .slider img{
+    width:75vw;
+    margin:0 auto;
+  }
+  
+
+  h1{
+    font-size: 23px;
   }
 
-  .heading h2 {
-    font-size: 20px;
-  }
-}
-
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
+  .category{
+    width:100%;
+    margin: 14px ;
   }
 
-  .menu-icon {
+  .contact{
+    height: fit-content;
+  }
+
+  .contactText{
+    position: static;
+    left:0;
+    width:100%;
+  }
+
+  .fome{
+    position: static;
     display: block;
+    width:100%;
+    margin-left:0px;
   }
 
-  .top-wrapper .btn {
+  button{
     width: 100%;
   }
 
-  .twitter {
-    margin-top: 10px;
+  .logo{
+    padding-top: 70px;
   }
 
-  .top-wrapper {
-    text-align: left;
-  }
 
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
 
-  .top-wrapper p {
-    font-size: 14px;
-  }
-
-  .lesson {
-    width: 100%;
-  }
-
-  .lesson-wrapper {
-    height: 1700px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
 }
